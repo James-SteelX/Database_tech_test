@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class DBServer < Sinatra::Base
 
-  STORED_PARAMS = {}
+  STORED_PAIRS = {}
 
   set :port, 4000
 
@@ -11,12 +11,12 @@ class DBServer < Sinatra::Base
   end
 
   get '/set' do
-    STORED_PARAMS.merge!(params)
+    STORED_PAIRS.merge!(params)
     redirect('/')
   end
 
   get '/get' do
-    @returned_value = STORED_PARAMS[params[:key]]
+    @returned_value = STORED_PAIRS[params[:key]]
     erb(:index)
   end
 

@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 feature 'App' do
+  
   scenario 'visit front page for first time' do
     visit('/')
     expect(page).to have_content("Set key value pairs by visiting 'http://localhost:4000/set?replacewhithkey=replacewithvalue")
