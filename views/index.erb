@@ -1,10 +1,10 @@
 
-<p>Set key value pairs by visiting 'http://localhost/set?<strong>replacewhithkey=replacewithvalue</strong>' </p>
-<p>To get a value you've set visit 'http://localhost/get?<strong>key=replacewithkey</strong>' </p>
+<p>Set key value pairs by visiting 'http://localhost:4000/set?<strong>replacewhithkey=replacewithvalue</strong>' </p>
+<p>To get a value you've set visit 'http://localhost:4000/get?<strong>key=replacewithkey</strong>' </p>
 <br>
 
 <p><strong> Stored </strong></p>
-<% PARAMS.each do |k, v| %>
+<% STORED_PARAMS.each do |k, v| %>
 <p><%= k %>:  <%= v %></p>
 <% end %>
 <br>
